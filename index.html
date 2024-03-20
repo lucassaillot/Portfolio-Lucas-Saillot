@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="icon"
+      id="favicon"
+      type="image/png"
+      href="img/flavicon_white.png"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/gh/eliyantosarage/font-awesome-pro@main/fontawesome-pro-6.5.1-web/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet" />
+    <title>Portfolio | Lucas Saillot</title>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <div class="logo">
+        <a href="/">
+          <img src="img/logo_C2E6FF.png" alt="Logo" />
+        </a>
+      </div>
+      <div class="nav">
+        <a href="/">Accueil</a>
+        <a href="#competence">Mes compétences</a>
+        <a href="#projets">Mes projets</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="menu-mobile" onclick="toggleMenu()">
+        <i class="fa-thin fa-bars-staggered"></i>
+      </div>
+    </header>
+    <!-- HEADER -->
+
+    <!-- BOUTON RETOURNER EN HAUT -->
+
+    <button
+      onclick="topFunction()"
+      id="bouton_aller_en_haut"
+      title="Retourner en haut de la page"
+    >
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- PROFIL -->
+    <div class="profil">
+      <img src="img/profil.png" alt="photo de profil" />
+      <h1>Je m'appelle Lucas Saillot.<br />J'ai 17ans.</h1>
+      <p>
+        Actuellement étudiant au Lycée Pablo Neruda en Terminale technologique
+        (STI2D), je m'oriente <br />
+        vers un Bachelor Concepteur Développeur Informatique en Alternance à
+        CESI.
+      </p>
+    </div>
+    <!-- PROFIL -->
+
+    <!-- BOUTONS -->
+    <div class="button">
+      <button class="btn1"><a href="#contact">Contact</a></button>
+      <button class="btn2">
+        <a href="/files/CV_Lucas_Saillot.pdf" target="_blank">Mon CV</a>
+      </button>
+    </div>
+    <!-- BOUTONS -->
+
+    <!-- COMPÉTENCES -->
+    <div class="competence" id="competence">
+      <h1>MES COMPÉTENCES:</h1>
+
+      <div class="competence_1-6">
+        <!-- HTML, CSS & JS -->
+        <div class="competence1">
+          <div class="logos_titre">
+            <img src="img/logos/html-5.png" alt="HTML5" />
+            <img src="img/logos/css-3.png" alt="CSS3" />
+            <img src="img/logos/js.png" alt="JavaScript" />
+            <h2>HTML5, CSS3 & JS</h2>
+          </div>
+          <div class="texte_competence">
+            <p>
+              Des bases solides en HTML et CSS, la capacité à reproduire un
+              design simple (modèle Figma par exemple). <br />
+              En capacité de faire un site Responsive. Des bases en JS comme la
+              gestion d’une API.
+            </p>
+          </div>
+        </div>
+        <!-- WORDPRESS -->
+        <div class="competence2">
+          <div class="logos_titre">
+            <img src="img/logos/wordpress.png" alt="WordPress" />
+            <h2>WordPress</h2>
+          </div>
+          <div class="texte_competence">
+            <p>
+              Une très bonne maîtrise du CMS Wordpress, en particulier avec
+              l’extension Elementor Pro pour la création de sites.
+            </p>
+          </div>
+        </div>
+        <!-- DOCKER -->
+        <div class="competence3">
+          <div class="logos_titre">
+            <img src="img/logos/docker.png" alt="WordPress" />
+            <h2>Docker</h2>
+          </div>
+          <div class="texte_competence">
+            <p>
+              Ayant un serveur maison, sur le système d’exploitation Unraid,
+              j’ai installé docker et construit toute l'architecture <br />
+              du serveur dessus.
+              <br />Mise en place d’un cloud maison avec l'image Nextcloud par
+              exemple. <br />
+              Avec aussi la mise en place d'un reverse proxy relié à mon nom de
+              domaine sur Cloudflare permettant l'accès <br />
+              extérieur au serveur.
+            </p>
+          </div>
+        </div>
+        <!-- CPANEL -->
+        <div class="competence4">
+          <div class="logos_titre">
+            <img src="img/logos/cpanel.png" alt="WordPress" />
+            <h2>cPanel</h2>
+          </div>
+          <div class="texte_competence">
+            <p>
+              Mise en ligne d’un Site WEB, gestions des domaines (Zones DNS),
+              certificats SSL, FTP, mise en place <br />
+              de scripts php etc... Ce Portfolio est le parfait exemple, il est
+              hébergé sur l'outil de gestion cPanel.
+            </p>
+          </div>
+        </div>
+        <!-- PYTHON -->
+        <div class="competence5">
+          <div class="logos_titre">
+            <img src="img/logos/python.png" alt="WordPress" />
+            <h2>Python</h2>
+          </div>
+          <div class="texte_competence">
+            <p>
+              Étudié au collège et au lycée, un langage où j’ai des bases. J’ai
+              déjà crée par exemple un bot discord en python.<br />
+            </p>
+          </div>
+        </div>
+        <!-- C++ -->
+        <div class="competence6">
+          <div class="logos_titre">
+            <img src="img/logos/c++.png" alt="WordPress" />
+            <h2>C++</h2>
+          </div>
+          <div class="texte_competence">
+            <p>
+              Le C++ est un language que j'ai seulement utilisé pour mes projets
+              Arduino au Lycée.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="projets" id="projets">
+      <h1>QUELQUES PROJETS :</h1>
+
+      <div class="projet_block">
+        <div class="projet" onclick="toggleProjet(this)">
+          <div class="projet_header">
+            <div class="projet_header_gauche">
+              <img src="img/logos/html-5.png" alt="HTML5" />
+              <img src="img/logos/css-3.png" alt="CSS3" />
+              <img src="img/logos/js.png" alt="JavaScript" />
+              <h2>MON PORTFOLIO</h2>
+            </div>
+            <div class="projet_header_droite">
+              <img
+                src="img/logos/caret-down.png"
+                alt="icon"
+                class="icon_caret"
+              />
+            </div>
+          </div>
+          <div class="projet_details" id="projet_portfolio">
+            <p>
+              Avec l’idée de trouver une alternance pour la rentrée 2024, je me
+              devais de créer mon Portfolio. J’ai donc développé ce Portfolio de
+              A à Z en utilisant le HTML, CSS et un peu de JavaScript pour par
+              exemple le responsive du header, ou bien encore le favicon qui
+              change en fonction du thème de l’appareil… J'ai aussi découvert le
+              responsive en faisant ce Portfolio. N'ayant aucune compétence en
+              Design, je me suis inspiré d’un modèle Figma déjà existant.
+            </p>
+            <div class="boutons">
+              <button
+                class="btn1"
+                onclick="toggleProjet(this); event.stopPropagation();"
+              >
+                <a
+                  href="https://github.com/lucassaillot/Portfolio-Lucas-Saillot"
+                  target="_blank"
+                  >Lien du code</a
+                >
+              </button>
+              <button
+                class="btn2"
+                onclick="toggleProjet(this); event.stopPropagation();"
+              >
+                <a
+                  href="https://www.figma.com/community/file/1308487677104759760/developer-portfolio-website-design"
+                  target="_blank"
+                  >Lien du design</a
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="projet" onclick="toggleProjet(this)">
+          <div class="projet_header">
+            <div class="projet_header_gauche">
+              <img src="img/logos/wordpress.png" alt="WordPress" />
+              <img src="img/logos/elementor.png" alt="Elementor" />
+              <h2>SLB-Rénovation - Projet WordPress</h2>
+            </div>
+            <div class="projet_header_droite">
+              <img
+                src="img/logos/caret-down.png"
+                alt="icon"
+                class="icon_caret"
+              />
+            </div>
+          </div>
+          <div class="projet_details" id="projet_wordpress">
+            <p>
+              WordPress est un outil que je maîtrise très bien, avec l'extension
+              Elementor Pro. J'ai réalisé plusieurs sites WordPress celui-ci en
+              est un exemple parfait. Le site internet de l'entreprise de mon
+              père SLB-Rénovation, je l'ai refait intégralement.
+            </p>
+            <div class="boutons">
+              <button
+                class="btn1"
+                onclick="toggleProjet(this); event.stopPropagation();"
+              >
+                <a
+                  href="https://slb-renovation.lucassaillot.fr/"
+                  target="_blank"
+                  >Lien du site WordPress</a
+                >
+              </button>
+              <button
+                class="btn2"
+                onclick="toggleProjet(this); event.stopPropagation();"
+              >
+                <a href="https://www.slb-renovation.fr/" target="_blank"
+                  >Lien du site orignal</a
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="projet" onclick="toggleProjet(this)">
+          <div class="projet_header">
+            <div class="projet_header_gauche">
+              <img src="img/logos/python.png" alt="PYTHON" />
+              <img src="img/logos/discord.png" alt="DISCORD" />
+              <h2>BOT DISCORD</h2>
+            </div>
+            <div class="projet_header_droite">
+              <img
+                src="img/logos/caret-down.png"
+                alt="icon"
+                class="icon_caret"
+              />
+            </div>
+          </div>
+          <div class="projet_details" id="projet_bot_discord">
+            <p>
+              L'idée de créer un BOT Discord à été l'un de mes tout premier
+              projet. J'ai utilisé ici la librairie discord.py pour développer
+              ce bot. L'idée était que ce bot devait récupérer un message d'un
+              utilisateur et le mettre dans un autre salon. En l'occurrence-là
+              un Film qu'un utilisateur recommande de regarder aux autres
+              utilisateurs. Le bot vérifie que le lien TheMovieDB soit bien
+              présent dans le message. Démonstration ci-dessous en vidéo.
+            </p>
+            <div class="boutons">
+              <button
+                class="btn1"
+                onclick="toggleProjet(this); event.stopPropagation();"
+              >
+                <a
+                  href="https://github.com/lucassaillot/bot-discord-suggestion-de-films"
+                  target="_blank"
+                  >Lien du code</a
+                >
+              </button>
+            </div>
+            <video
+              id="my-video"
+              class="video-js"
+              controls
+              preload="auto"
+              poster="files/poster_video_presentation_bot_discord.png"
+              data-setup="{}"
+              onclick="toggleProjet(this); event.stopPropagation();"
+            >
+              <source
+                src="files/video-presentation-bot-discord.mp4"
+                type="video/mp4"
+              />
+            </video>
+          </div>
+        </div>
+        <footer>
+          <div class="logo_ls">
+            <img src="/img/logo_C2E6FF.png" alt="logo" />
+          </div>
+          <div class="droite_footer">
+            <div class="contenu">
+              <h1>Contact</h1>
+              <p>
+                Actuellement étudiant au Lycée Pablo Neruda en Terminale
+                technologique (STI2D), je m'oriente <br />
+                vers un Bachelor Concepteur Développeur Informatique en
+                Alternance à CESI.
+              </p>
+            </div>
+            <div class="contact" id="contact">
+              <div class="telephone">
+                <i class="fa-regular fa-phone"></i>
+                <a href="tel:+33761525043">07 61 52 50 43</a>
+              </div>
+              <div class="mail">
+                <i class="fa-light fa-envelope"></i>
+                <a href="mailto:saillot.lucas2006@gmail.com"
+                  >saillot.lucas2006@gmail.com</a
+                >
+              </div>
+            </div>
+            <div class="logos">
+              <a href="https://github.com/lucassaillot" target="_blank"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+              <a href="https://www.instagram.com/lucas.saillot/" target="_blank"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a
+                href="https://www.facebook.com/profile.php?id=100063769503624"
+                target="_blank"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <!-- JS -->
+    <script src="js/script.js"></script>
+    <!-- VIDEOJS -->
+    <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
+  </body>
+</html>

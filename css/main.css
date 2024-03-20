@@ -1,0 +1,1230 @@
+/* GOOGLE FONTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* GOOGLE FONTS */
+
+/* MAIN */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--background);
+}
+
+:root {
+    --background: #0D1520;
+    --background2: #111927;
+    --composants-interactifs: #0D2847;
+    --composants-interactifs2: #003362;
+    --composants-interactifs3: #004074;
+    --border-separateur: #2870BD;
+    --couleur-solide: #0090FF;
+    --text: #C2E6FF;
+    --text2: #70B8FF;
+}
+
+/* BOUTON ALLER EN HAUT DE LA PAGE */
+#bouton_aller_en_haut {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: var(--text2);
+    color: var(--composants-interactifs);
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 35px;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+#bouton_aller_en_haut:hover {
+    background-color: var(--text);
+}
+  
+/* RESPONSIVE BOUTON ALLER EN HAUT DE LA PAGE */
+
+/* TELEPHONE */
+
+@media screen and (max-width: 720px) {
+    #bouton_aller_en_haut {
+        font-size: 25px;
+        width: 50px;
+        height: 50px;
+        right: 15px;
+    }
+}
+
+/* TABLETTE PORTRAIT 900px */
+
+@media screen and (min-width: 720px) and (max-width: 900px) {
+    #bouton_aller_en_haut {
+        font-size: 25px;
+        width: 50px;
+        height: 50px;
+        
+    }
+}
+
+/* TABLETTE PLUS GRANDE 1024px */
+
+@media screen and (min-width: 900px) and (max-width: 1024px) {
+    #bouton_aller_en_haut {
+        font-size: 30px;
+        width: 60px;
+        height: 60px;
+    }
+}
+
+
+/* MAIN */
+
+/* HEADER */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--background2);
+}
+
+.logo img {
+    width: 220px;
+    margin-left: 50px;
+}
+
+.nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    margin-right: 200px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--text);
+    transition: color 0.3s ease;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.nav a:hover {
+    color: var(--text2);
+}
+
+.menu-mobile {
+    display: none;
+}
+
+/* TEL PORTRAIT 720px*/
+@media screen and (max-width: 720px) {
+    header {
+        display: flex;
+        overflow: hidden;
+    }
+
+    .logo img {
+        width: 150px;
+        margin-left: 2px;
+        align-items: center;
+    }
+
+    .nav {
+        display: none;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        z-index: 1000;
+    }
+
+    .menu-mobile {
+        display: flex;
+        cursor: pointer;
+    }
+
+    .menu-mobile i {
+        font-size: 30px;
+        color: var(--text);
+        margin-right: 50px;
+    }
+
+    .nav.active {
+        display: block;
+        width: 100%;
+        top: 76px;
+        left: 0;
+        overflow: hidden;
+        background-color: var(--background2);/
+    }
+
+    .nav.active a {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        position: relative;
+        width: 100%;
+        margin: 0;
+        font-size: 20px;
+        padding: 5px;
+    }
+
+    .nav.active a:hover {
+        background-color: var(--background);
+    }
+}
+
+
+/* TABLETTE PORTRAIT 900px */
+
+@media screen and (min-width: 720px) and (max-width: 900px) {
+    header {
+        display: flex;
+        overflow: hidden;
+    }
+
+    .logo img {
+        width: 150px;
+        margin-left: 2px;
+        align-items: center;
+    }
+
+    .nav {
+        display: none;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        z-index: 1000;
+    }
+
+    .menu-mobile {
+        display: flex;
+        cursor: pointer;
+    }
+
+    .menu-mobile i {
+        font-size: 30px;
+        color: var(--text);
+        margin-right: 50px;
+    }
+
+    .nav.active {
+        display: block;
+        width: 100%;
+        top: 77px;
+        left: 0;
+        overflow: hidden;
+        background-color: var(--background2);/
+    }
+
+    .nav.active a {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        position: relative;
+        width: 100%;
+        margin: 0;
+        font-size: 20px;
+        padding: 5px;
+    }
+
+    .nav.active a:hover {
+        background-color: var(--background);
+    }
+}
+
+/* TABLETTE PLUS GRANDE 1024px */
+
+@media screen and (min-width: 900px) and (max-width: 1024px) {
+    header {
+        display: flex;
+        overflow: hidden;
+    }
+
+    .logo img {
+        width: 150px;
+        margin-left: 2px;
+        align-items: center;
+    }
+
+    .nav {
+        margin-right: 100px;
+    }
+}
+
+/* HEADER */
+
+/* PROFIL */
+
+.profil {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.profil img {
+    margin-top: 50px;
+    width: 250px;
+}
+
+.profil h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 10px;
+    color: var(--text);
+    line-height: 1.5;
+}
+
+.profil p {
+    text-align: center;
+    color: var(--text2);
+    margin-top: 10px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.3;
+}
+
+/* TELEPHONE */
+
+@media screen and (max-width: 720px) {
+    .profil img {
+        margin-top: 20px;
+        width: 150px;
+    }
+
+    .profil h1 {
+        font-size: 20px;
+    }
+
+    .profil p {
+        font-size: 12px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+/* TABLETTE PORTRAIT 900px */
+
+@media screen and (min-width: 720px) and (max-width: 900px) {
+    .profil img {
+        margin-top: 30px;
+        width: 150px;
+    }
+
+    .profil h1 {
+        font-size: 30px;
+    }
+
+    .profil p {
+        font-size: 15px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+/* TABLETTE PLUS GRANDE 1024px */
+
+@media screen and (min-width: 900px) and (max-width: 1024px) {
+    .profil img {
+        margin-top: 30px;
+        width: 150px;
+    }
+
+    .profil h1 {
+        font-size: 30px;
+    }
+
+    .profil p {
+        font-size: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+/* PROFIL */
+
+/* BOUTON */
+
+.button {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.button .btn1 {
+    display: inline-block;
+    padding: 10px 16px;
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+    line-height: auto;
+    height: auto;
+    width: 180px;
+    font-weight: 400 bold;
+    text-align: center;
+    text-decoration: none;
+    background-color: var(--text);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: ease 0.3s;
+}
+
+.button .btn1 a {
+    text-decoration: none;
+    color: var(--composants-interactifs);
+    transition: color 0.3s;
+}
+.button .btn1:hover {
+    color: var(--text2);
+    transform: scale(1.1);
+}
+
+.button .btn1 a:hover {
+    color: var(--text2);
+}
+
+.button .btn2 {
+    display: inline-block;
+    padding: 10px 16px;
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+    line-height: auto;
+    height: auto;
+    width: 180px;
+    font-weight: 400 bold;
+    text-align: center;
+    text-decoration: none;
+    background-color: var(--composants-interactifs);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: ease 0.3s;
+    margin-left: 10px;
+}
+
+.button .btn2 a {
+    text-decoration: none;
+    color: var(--text);
+    transition: color 0.3s;
+}
+
+.button .btn2:hover {
+    color: var(--text2);
+    transform: scale(1.1);
+}
+
+.button .btn2 a:hover {
+    color: var(--text2);    
+}
+
+
+/* TELEPHONE */
+
+@media screen and (max-width: 720px) {
+    .button {
+        margin-top: 25px;
+    }
+    .button .btn1 {
+        font-size: 20px;
+        width: 120px;
+    }
+    
+    .button .btn2 {
+        font-size: 20px;
+        width: 120px;
+    }    
+}
+
+/* TABLETTE PORTRAIT 900px */
+
+@media screen and (min-width: 720px) and (max-width: 900px) {
+    .button {
+        margin-top: 25px;
+    }
+    .button .btn1 {
+        font-size: 20px;
+        width: 120px;
+    }
+    
+    .button .btn2 {
+        font-size: 20px;
+        width: 120px;
+    }    
+}
+
+/* BOUTON */
+
+
+/* COMPETENCES */
+
+.competence {
+    display: flex;
+    flex-direction: column;
+}
+
+/* GROS TITRE */
+.competence h1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--text2);
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+/* block competence 1 à 6 */
+.competence .competence_1-6 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+/* TITRE + LOGO */
+.competence .competence_1-6 .logos_titre {
+    margin-block: 20px;
+    display: flex;
+    align-items: center;
+}
+
+/* LOGO */
+.competence .competence_1-6 .logos_titre img {
+    width: 40px;
+    height: 40px;
+    padding-right: 2px;
+}
+
+/* cPanel logo (pas carré, taille à changer) */
+.competence .competence4 .logos_titre img {
+    width: 60px;
+    height: auto;
+    padding-right: 2px;
+}
+
+/* TITRE */
+.competence .competence_1-6 .logos_titre h2 {
+    font-family: 'Poppins',sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    margin-left: 15px;
+    color: var(--text2);
+}
+
+/* PARAGRAPHE */
+.competence .competence_1-6 .texte_competence p {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 20px;
+    font-family: 'Plus Jakarta Sans';
+    color: var(--text);
+    margin-top: 10px;
+}
+
+/* LE PETIT POINT AVANT LE PARAGRAPHE */
+.competence .competence_1-6 .texte_competence p::before {
+    content: "• ";
+    margin-right: 10px;
+}
+
+/* TELEPHONE */
+
+@media screen and (max-width: 720px) {
+    .competence h1 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        margin-top: 20px;
+    }
+
+    .competence .competence_1-6 {
+        margin: 0 20px;
+    }
+
+    .competence .competence_1-6 .logos_titre {
+        margin-block: 15px;
+    }
+    .competence .competence_1-6 .logos_titre img {
+        width: 30px;
+        height: 30px;
+        padding-right: 2px;
+    }
+
+    .competence .competence4 .logos_titre img {
+        width: 50px;
+        height: auto;
+        padding-right: 2px;
+    }
+
+    .competence .competence_1-6 .logos_titre h2 {
+        font-size: 15px;
+        margin-left: 10px;
+    }
+
+    .competence .competence_1-6 .texte_competence p {
+        font-size: 12px;
+        margin-top: 0px;
+    }
+
+}
+
+/* TABLETTE PORTRAIT 900px */
+
+@media screen and (min-width: 720px) and (max-width: 900px) {
+    .competence h1 {
+        font-size: 25px ;
+        margin-bottom: 10px;
+        margin-top: 20px;
+    }
+
+    .competence .competence_1-6 {
+        margin: 0 100px;
+    }
+
+    .competence .competence_1-6 .logos_titre {
+        margin-block: 15px;
+    }
+    .competence .competence_1-6 .logos_titre img {
+        width: 30px;
+        height: 30px;
+        padding-right: 2px;
+    }
+
+    .competence .competence4 .logos_titre img {
+        width: 60px;
+        height: auto;
+        padding-right: 2px;
+    }
+
+    .competence .competence_1-6 .logos_titre h2 {
+        font-size: 20px;
+        margin-left: 10px;
+    }
+
+    .competence .competence_1-6 .texte_competence p {
+        font-size: 15px;
+        margin-top: 0px;
+    }
+}
+
+/* TABLETTE PLUS GRANDE 1024px */
+
+@media screen and (min-width: 900px) and (max-width: 1024px) {
+    .competence h1 {
+        font-size: 25px ;
+        margin-bottom: 10px;
+        margin-top: 20px;
+    }
+
+    .competence .competence_1-6 {
+        margin: 0 auto;
+    }
+
+    .competence .competence_1-6 .logos_titre {
+        margin-block: 15px;
+    }
+    .competence .competence_1-6 .logos_titre img {
+        width: 30px;
+        height: 30px;
+        padding-right: 2px;
+    }
+
+    .competence .competence4 .logos_titre img {
+        width: 60px;
+        height: auto;
+        padding-right: 2px;
+    }
+
+    .competence .competence_1-6 .logos_titre h2 {
+        font-size: 20px;
+        margin-left: 10px;
+    }
+
+    .competence .competence_1-6 .texte_competence p {
+        font-size: 15px;
+        margin-top: 0px;
+    }
+}
+
+/* COMPETENCES */
+
+/* MES PROJETS TITRE */
+
+.projets {
+    display: flex;
+    flex-direction: column;
+}
+
+.projets h1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--text2);
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+/* PARAMETRES GLOBAUX DES PROJETS */
+
+.projet {
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-inline: 20vw;
+    overflow: hidden;
+    cursor: pointer;
+    transition: height 0.3s;
+    background: linear-gradient(to bottom, var(--composants-interactifs), var(--composants-interactifs2), var(--composants-interactifs3));
+}
+
+/* HEADERS DES PROJETS */
+.projet_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* COTER GAUCHE HEADER DES PROJETS */
+.projet_header_gauche {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+
+/* LOGOS DU HEADER DES PROEJTS */
+.projet_header_gauche img {
+    width: 40px;
+    height: 40px;
+    margin-right: 4px;
+}
+
+/* NOM DU PROJET */
+.projet_header_gauche h2 {
+    font-family: 'Poppins',sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    margin-left: 15px;
+    color: var(--text2);
+}
+
+/* ICONE FERMER OUVRIR */
+.projet_header_droite img {
+    height: 30px;
+    width: 30px;
+    margin-right: 50px;
+}
+
+/* ROTATION ICONE QUAND OUVERT FERMÉ */
+.icon_caret.rotate {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+}
+
+/* DETAILS DES PROJETS */
+.projet_details {
+    display: flex;
+    flex-direction: column;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    background-color: transparent;
+}
+
+.projet.active .projet_details{
+    max-height: 500px;
+    transition: max-height 0.5s ease-in;
+}
+/* PARAGRAPHE DES PROJETS */
+.projet_details p {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 20px;
+    color: var(--text);
+}
+
+/* PROJETS BOUTONS */
+.projet_details .boutons{
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* BOUTON 1 */
+.projet_details .btn1 {
+    display: inline-block;
+    padding: 10px 16px;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    line-height: auto;
+    height: auto;
+    width: auto;
+    font-weight: 400 bold;
+    text-align: center;
+    text-decoration: none;
+    background-color: var(--text);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: ease 0.3s;
+}
+
+/* LIEN BOUTON 1 */
+.projet_details .btn1 a {
+    text-decoration: none;
+    color: var(--composants-interactifs);
+    transition: color 0.3s;
+}
+
+/* HOVER BOUTON 1 */
+.projet_details .btn1:hover {
+    color: var(--text2);
+    transform: scale(1.1);
+}
+
+/* HOVER LIEN BOUTON 1 */
+.projet_details .btn1 a:hover {
+    color: var(--text2);
+}
+
+/* BOUTON 2 */
+.projet_details .btn2 {
+    display: inline-block;
+    padding: 10px 16px;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    line-height: auto;
+    height: auto;
+    width: auto;
+    font-weight: 400 bold;
+    text-align: center;
+    text-decoration: none;
+    background-color: var(--composants-interactifs);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: ease 0.3s;
+    margin-left: 10px;
+}
+
+/* LIEN BOUTON 2 */
+.projet_details .btn2 a {
+    text-decoration: none;
+    color: var(--text);
+    transition: color 0.3s;
+}
+
+/* HOVER BOUTON 2 */
+.projet_details .btn2:hover {
+    color: var(--text2);
+    transform: scale(1.1);
+}
+
+/* HOVER LIEN BOUTON 2 */
+.projet_details .btn2 a:hover {
+    color: var(--text2);    
+}
+
+/* PARAMETRES PAR PROJET */ 
+
+/* PROJET BOT DISCORD */
+
+/* VIDEO PROJET BOT DISCORD */
+
+.projet_details .video-js {
+    width: 525px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+/* RESPONSIVE DES PROJETS */
+
+/* TELEPHONE */
+
+@media screen and (max-width: 720px) {
+    .projets h1 {
+        margin-top: 20px;
+        font-size: 20px;
+    }
+
+    .projet {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-inline: 5vw;
+    }
+
+    .projet_header_gauche img {
+        width: 20px;
+        height: 20px;
+        margin-right: 2px;
+    }
+
+    .projet_header_gauche h2 {
+        font-size: 10px;
+    }
+
+    .projet_header_droite img {
+        height: 20px;
+        width: 20px;
+        margin-right: 20px;
+    }
+
+    .projet_details p {
+        font-size: 12px;
+    }
+
+    .projet_details .boutons{
+        margin: 20px;
+        margin-top: 10px;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .projet_details .btn1 {
+        padding: 6px 8px;
+        font-size: 12px;
+        margin-right: 5px;
+    }
+
+    .projet_details .btn2 {
+        padding: 6px 8px;
+        font-size: 12px;
+        margin-left: 5px;
+    }
+    
+    .projet_details .video-js {
+        width: 225px;
+        height: 140px;
+    }
+}
+
+/* TABLETTE PORTRAIT 900px */
+
+@media screen and (min-width: 720px) and (max-width: 900px) {
+    .projets h1 {
+        margin-top: 20px;
+        font-size: 20px;
+    }
+
+    .projet {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-inline: 5vw;
+    }
+
+    .projet_header_gauche img {
+        width: 30px;
+        height: 30px;
+        margin-right: 2px;
+    }
+
+    .projet_header_gauche h2 {
+        font-size: 20px;
+    }
+
+    .projet_header_droite img {
+        height: 25px;
+        width: 25px;
+        margin-right: 30px;
+    }
+
+    .projet_details p {
+        font-size: 15px;
+    }
+
+    .projet_details .boutons{
+        margin: 20px;
+        margin-top: 10px;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .projet_details .btn1 {
+        padding: 8px 12px;
+        font-size: 15px;
+        margin-right: 5px;
+    }
+
+    .projet_details .btn2 {
+        padding: 8px 12px;
+        font-size: 15px;
+        margin-left: 5px;
+    }
+    
+    .projet_details .video-js {
+        width: 350px;
+        height: 200px;
+    }
+}
+
+/* TABLETTE PLUS GRANDE 1024px */
+
+@media screen and (min-width: 900px) and (max-width: 1024px) {
+    .projets h1 {
+        margin-top: 20px;
+        font-size: 20px;
+    }
+
+    .projet {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-inline: 5vw;
+    }
+
+    .projet_header_gauche img {
+        width: 30px;
+        height: 30px;
+        margin-right: 2px;
+    }
+
+    .projet_header_gauche h2 {
+        font-size: 20px;
+    }
+
+    .projet_header_droite img {
+        height: 25px;
+        width: 25px;
+        margin-right: 30px;
+    }
+
+    .projet_details p {
+        font-size: 15px;
+    }
+
+    .projet_details .boutons{
+        margin: 20px;
+        margin-top: 10px;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .projet_details .btn1 {
+        padding: 8px 12px;
+        font-size: 15px;
+        margin-right: 5px;
+    }
+
+    .projet_details .btn2 {
+        padding: 8px 12px;
+        font-size: 15px;
+        margin-left: 5px;
+    }
+    
+    .projet_details .video-js {
+        width: 350px;
+        height: 200px;
+    }
+}
+
+
+/* FIN PROJETS */
+
+
+/* FOOTER */
+
+footer {
+    background-color: var(--background2);
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+footer .logo_ls {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+footer .logo_ls img {
+    width: auto;
+    height: 150px;
+    margin-right: 200px;
+}
+
+.contenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.contenu h1 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--text2);
+    font-size: 30px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.contenu p {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 15px;
+    color: var(--text);
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.droite_footer .contact {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.contact i {
+    color: var(--text);
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.contact a {
+    text-decoration: none;
+    color: var(--text2);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 20px;
+}
+
+.contact .telephone {
+    margin-bottom: 10px;
+}
+
+.droite_footer .logos {
+    margin-top: 20px;
+}
+
+.droite_footer .logos a {
+    text-decoration: none;
+}
+
+.droite_footer .logos i {
+    font-size: 25px;
+    color: var(--text);
+    margin-right: 10px;
+}
+
+/* TELEPHONE */
+
+@media screen and (max-width: 720px) {
+    footer {
+        padding-left: 20px;
+    }
+    footer .logo_ls img {
+        display: none;
+    }
+    
+    .contenu h1 {
+        font-size: 20px;
+    }
+    
+    .contenu p {
+        font-size: 10px;
+    }
+  
+    .contact i {
+        color: var(--text);
+        font-size: 15px;
+        margin-right: 5px;
+    }
+    
+    .contact a {
+        font-size: 15px;
+    }
+    
+    .droite_footer .logos i {
+        font-size: 20px;
+    }
+}
+
+/* TABLETTE PORTRAIT 900px */
+
+@media screen and (min-width: 720px) and (max-width: 900px) {
+    footer {
+        padding-left: 20px;
+    }
+    footer .logo_ls img {
+        display: none;
+    }
+    
+    .contenu h1 {
+        font-size: 20px;
+    }
+    
+    .contenu p {
+        font-size: 10px;
+    }
+  
+    .contact i {
+        color: var(--text);
+        font-size: 15px;
+        margin-right: 5px;
+    }
+    
+    .contact a {
+        font-size: 15px;
+    }
+    
+    .droite_footer .logos i {
+        font-size: 20px;
+    }
+}
+
+/* TABLETTE PLUS GRANDE 1024px */
+
+@media screen and (min-width: 900px) and (max-width: 1024px) {
+    footer {
+        padding-left: 20px;
+    }
+    footer .logo_ls img {
+        display: none;
+    }
+    
+    .contenu h1 {
+        font-size: 20px;
+    }
+    
+    .contenu p {
+        font-size: 10px;
+    }
+  
+    .contact i {
+        color: var(--text);
+        font-size: 15px;
+        margin-right: 5px;
+    }
+    
+    .contact a {
+        font-size: 15px;
+    }
+    
+    .droite_footer .logos i {
+        font-size: 20px;
+    }
+}
+
+
+/* FOOTER */
