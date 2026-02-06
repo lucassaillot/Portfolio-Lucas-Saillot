@@ -1,5 +1,9 @@
+when:
+  event: push
+  branch: main
+
 steps:
-  build:
+  build-image:
     image: docker/compose
     commands:
       - docker-compose build
@@ -7,7 +11,5 @@ steps:
   deploy:
     image: docker/compose
     commands:
+      - docker-compose down || true
       - docker-compose up -d
-    when:
-      branch: main
-      event: push
