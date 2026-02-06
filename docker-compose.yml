@@ -2,12 +2,6 @@ services:
   portfolio:
     build: .
     container_name: portfolio
-    networks:
-      - proxy
     ports:
       - "8080:80"
     restart: unless-stopped
-
-networks:
-  proxy:
-    external: true
