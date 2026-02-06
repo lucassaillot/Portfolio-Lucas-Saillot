@@ -2,6 +2,4 @@ services:
   portfolio:
     build: .
     container_name: portfolio
-    ports:
-      - "7070:80"
     restart: unless-stopped
