@@ -1,6 +1,12 @@
 services:
   portfolio:
     image: portfolio:latest
+    networks:
+      - proxy
     build: .
     container_name: portfolio
     restart: unless-stopped
+
+networks:
+  proxy:
+    external: true
