@@ -4,11 +4,11 @@ when:
 
 steps:
   build:
-    image: docker/compose
+    image: docker:latest  # ← Utiliser docker:latest au lieu de docker/compose
     commands:
-      - docker-compose build
+      - docker compose build  # Note: "docker compose" (avec espace) au lieu de "docker-compose"
   
   deploy:
-    image: docker/compose
+    image: docker:latest
     commands:
-      - docker-compose up -d
+      - docker compose up -d
