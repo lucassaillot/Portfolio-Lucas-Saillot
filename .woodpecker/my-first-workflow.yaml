@@ -1,15 +1,18 @@
 when:
-  event: push
-  branch: main
+  - event: push
+    branch: main
 
 steps:
-  build-image:
-    image: docker/compose
+  build:
+    image: docker/compose:latest
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
     commands:
       - docker-compose build
   
   deploy:
-    image: docker/compose
+    image: docker/compose:latest
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
     commands:
-      - docker-compose down || true
       - docker-compose up -d
