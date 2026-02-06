@@ -1,383 +1,79 @@
+
+
 <!DOCTYPE html>
-<html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/main.css" />
-    <link
-      rel="icon"
-      id="favicon"
-      type="image/png"
-      href="img/flavicon_white.png"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet" />
-    <title>Portfolio | Lucas Saillot</title>
-  </head>
-  <body>
-    <!-- HEADER -->
-    <header>
-      <div class="logo">
-        <a href="/">
-          <img src="img/logo_C2E6FF.png" alt="Logo" />
-        </a>
-      </div>
-      <div class="nav">
-        <a href="/">Accueil</a>
-        <a href="#competence">Mes compétences</a>
-        <a href="#projets">Mes projets</a>
-        <a href="https://tr.ee/DJpmeImhKU" target="_blank">Contact</a>
-      </div>
-      <div class="menu-mobile" onclick="toggleMenu()">
-        <i class="fa-solid fa-bars"></i>      
-      </div>
-    </header>
-    <!-- HEADER -->
+<html lang=fr>
+<head>
+<meta charset=UTF-8>
+<meta name=viewport content="width=device-width, initial-scale=1.0">
+<title>Lucas Saillot – Site en cours de construction</title>
+<link rel=preconnect href="https://fonts.googleapis.com">
+<link rel=preconnect href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500&display=swap" rel=stylesheet>
+<style>
+    :root {
+      --background: #0D1520;
+      --text: #C2E6FF;
+      --text2: #70B8FF;
+    }
 
-    <!-- BOUTON RETOURNER EN HAUT -->
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-    <button
-      onclick="topFunction()"
-      id="bouton_aller_en_haut"
-      title="Retourner en haut de la page"
-    >
-      <i class="fa-solid fa-arrow-up"></i>
-    </button>
+    body {
+      background-color: var(--background);
+      color: var(--text);
+      font-family: "Plus Jakarta Sans", sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+      text-align: center;
+    }
 
-    <!-- PROFIL -->
-    <div class="profil">
-      <img src="img/profil.png" alt="photo de profil" />
-      <h1>Je m'appelle Lucas Saillot.<br />J'ai 19ans.</h1>
-      <p>
-        Actuellement étudiant au Lycée Pablo Neruda en Terminale technologique
-        (STI2D), <br />
-        Suite à mon acceptation à CESI Rouen pour le Bachelor Concepteur
-        Développeur Informatique en Alternance, <br />Je suis à la recherche
-        d'une entreprise capable de m’offrir la possibilité d’apprendre le
-        métier de Développeur Informatique.
-      </p>
-    </div>
-    <!-- PROFIL -->
+    img {
+      max-width: 220px;
+      height: auto;
+      margin-bottom: 2rem;
+    }
 
-    <!-- BOUTONS -->
-    <div class="button">
-      <button class="btn1">
-        <a href="https://tr.ee/DJpmeImhKU" target="_blank">Contact</a>
-      </button>
-      <button class="btn2">
-        <a href="/files/CV_Lucas_Saillot.pdf" target="_blank">Mon CV</a>
-      </button>
-    </div>
-    <!-- BOUTONS -->
+    h1 {
+      font-weight: 500;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
 
-    <!-- COMPÉTENCES -->
-    <div class="competence" id="competence">
-      <h1>MES COMPÉTENCES:</h1>
+    a {
+      color: var(--text2);
+      text-decoration: none;
+      font-weight: 500;
+    }
 
-      <div class="competence_1-6">
-        <!-- HTML, CSS & JS -->
-        <div class="competence1">
-          <div class="logos_titre">
-            <img src="img/logos/html-5.png" alt="HTML5" />
-            <img src="img/logos/css-3.png" alt="CSS3" />
-            <img src="img/logos/js.png" alt="JavaScript" />
-            <h2>HTML5, CSS3 & JS</h2>
-          </div>
-          <div class="texte_competence">
-            <p>
-              Des bases solides en HTML et CSS, la capacité à reproduire un
-              design simple (modèle Figma par exemple). <br />
-              En capacité de faire un site Responsive. Des bases en JS comme la
-              gestion d’une API.
-            </p>
-          </div>
-        </div>
-        <!-- WORDPRESS -->
-        <div class="competence2">
-          <div class="logos_titre">
-            <img src="img/logos/wordpress.png" alt="WordPress" />
-            <h2>WordPress</h2>
-          </div>
-          <div class="texte_competence">
-            <p>
-              Une très bonne maîtrise du CMS Wordpress, en particulier avec
-              l’extension Elementor Pro pour la création de sites.
-            </p>
-          </div>
-        </div>
-        <!-- DOCKER -->
-        <div class="competence3">
-          <div class="logos_titre">
-            <img src="img/logos/docker.png" alt="WordPress" />
-            <h2>Docker</h2>
-          </div>
-          <div class="texte_competence">
-            <p>
-              Ayant un serveur maison, sur le système d’exploitation Unraid,
-              j’ai installé docker et construit toute l'architecture <br />
-              du serveur dessus.
-              <br />Mise en place d’un cloud maison avec l'image Nextcloud par
-              exemple. <br />
-              Avec aussi la mise en place d'un reverse proxy relié à mon nom de
-              domaine sur Cloudflare permettant l'accès <br />
-              extérieur au serveur.
-            </p>
-          </div>
-        </div>
-        <!-- CPANEL -->
-        <div class="competence4">
-          <div class="logos_titre">
-            <img src="img/logos/cpanel.png" alt="WordPress" />
-            <h2>cPanel</h2>
-          </div>
-          <div class="texte_competence">
-            <p>
-              Mise en ligne d’un Site WEB, gestions des domaines (Zones DNS),
-              certificats SSL, FTP, mise en place <br />
-              de scripts php etc... Ce Portfolio est le parfait exemple, il est
-              hébergé sur l'outil de gestion cPanel.
-            </p>
-          </div>
-        </div>
-        <!-- PYTHON -->
-        <div class="competence5">
-          <div class="logos_titre">
-            <img src="img/logos/python.png" alt="WordPress" />
-            <h2>Python</h2>
-          </div>
-          <div class="texte_competence">
-            <p>
-              Étudié au collège et au lycée, un langage où j’ai des bases. J’ai
-              déjà crée par exemple un bot discord en python.<br />
-            </p>
-          </div>
-        </div>
-        <!-- C++ -->
-        <div class="competence6">
-          <div class="logos_titre">
-            <img src="img/logos/c++.png" alt="WordPress" />
-            <h2>C++</h2>
-          </div>
-          <div class="texte_competence">
-            <p>
-              Le C++ est un language que j'ai seulement utilisé pour mes projets
-              Arduino au Lycée.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="projets" id="projets">
-      <h1>QUELQUES PROJETS :</h1>
+    a:hover {
+      text-decoration: underline;
+    }
 
-      <div class="projet_block">
-        <div class="projet" onclick="toggleProjet(this)">
-          <div class="projet_header">
-            <div class="projet_header_gauche">
-              <img src="img/logos/html-5.png" alt="HTML5" />
-              <img src="img/logos/css-3.png" alt="CSS3" />
-              <img src="img/logos/js.png" alt="JavaScript" />
-              <h2>MON PORTFOLIO</h2>
-            </div>
-            <div class="projet_header_droite">
-              <img
-                src="img/logos/caret-down.png"
-                alt="icon"
-                class="icon_caret"
-              />
-            </div>
-          </div>
-          <div class="projet_details" id="projet_portfolio">
-            <p>
-              Avec l’idée de trouver une alternance pour la rentrée 2024, je me
-              devais de créer mon Portfolio. J’ai donc développé ce Portfolio de
-              A à Z en utilisant le HTML, CSS et un peu de JavaScript pour par
-              exemple le responsive du header, ou bien encore le favicon qui
-              change en fonction du thème de l’appareil… J'ai aussi découvert le
-              responsive en faisant ce Portfolio. N'ayant aucune compétence en
-              Design, je me suis inspiré d’un modèle Figma déjà existant.
-            </p>
-            <div class="boutons">
-              <button
-                class="btn1"
-                onclick="toggleProjet(this); event.stopPropagation();"
-              >
-                <a
-                  href="https://github.com/lucassaillot/Portfolio-Lucas-Saillot"
-                  target="_blank"
-                  >Lien du code</a
-                >
-              </button>
-              <button
-                class="btn2"
-                onclick="toggleProjet(this); event.stopPropagation();"
-              >
-                <a
-                  href="https://www.figma.com/community/file/1308487677104759760/developer-portfolio-website-design"
-                  target="_blank"
-                  >Lien du design</a
-                >
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="projet" onclick="toggleProjet(this)">
-          <div class="projet_header">
-            <div class="projet_header_gauche">
-              <img src="img/logos/wordpress.png" alt="WordPress" />
-              <img src="img/logos/elementor.png" alt="Elementor" />
-              <h2>SLB-Rénovation - Projet WordPress</h2>
-            </div>
-            <div class="projet_header_droite">
-              <img
-                src="img/logos/caret-down.png"
-                alt="icon"
-                class="icon_caret"
-              />
-            </div>
-          </div>
-          <div class="projet_details" id="projet_wordpress">
-            <p>
-              WordPress est un outil que je maîtrise très bien, avec l'extension
-              Elementor Pro. J'ai réalisé plusieurs sites WordPress celui-ci en
-              est un exemple parfait. Le site internet de l'entreprise de mon
-              père SLB-Rénovation, je l'ai refait intégralement.
-            </p>
-            <div class="boutons">
-              <button
-                class="btn1"
-                onclick="toggleProjet(this); event.stopPropagation();"
-              >
-                <a
-                  href="https://slb-renovation.lucassaillot.fr/"
-                  target="_blank"
-                  >Lien du site WordPress</a
-                >
-              </button>
-              <button
-                class="btn2"
-                onclick="toggleProjet(this); event.stopPropagation();"
-              >
-                <a href="https://www.slb-renovation.fr/" target="_blank"
-                  >Lien du site orignal</a
-                >
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="projet" onclick="toggleProjet(this)">
-          <div class="projet_header">
-            <div class="projet_header_gauche">
-              <img src="img/logos/python.png" alt="PYTHON" />
-              <img src="img/logos/discord.png" alt="DISCORD" />
-              <h2>BOT DISCORD</h2>
-            </div>
-            <div class="projet_header_droite">
-              <img
-                src="img/logos/caret-down.png"
-                alt="icon"
-                class="icon_caret"
-              />
-            </div>
-          </div>
-          <div class="projet_details" id="projet_bot_discord">
-            <p>
-              L'idée de créer un BOT Discord à été l'un de mes tout premier
-              projet. J'ai utilisé ici la librairie discord.py pour développer
-              ce bot. L'idée était que ce bot devait récupérer un message d'un
-              utilisateur et le mettre dans un autre salon. En l'occurrence-là
-              un Film qu'un utilisateur recommande de regarder aux autres
-              utilisateurs. Le bot vérifie que le lien TheMovieDB soit bien
-              présent dans le message. Démonstration ci-dessous en vidéo.
-            </p>
-            <div class="boutons">
-              <button
-                class="btn1"
-                onclick="toggleProjet(this); event.stopPropagation();"
-              >
-                <a
-                  href="https://github.com/lucassaillot/bot-discord-suggestion-de-films"
-                  target="_blank"
-                  >Lien du code</a
-                >
-              </button>
-            </div>
-            <video
-              id="my-video"
-              class="video-js"
-              controls
-              preload="auto"
-              poster="files/poster_video_presentation_bot_discord.png"
-              data-setup="{}"
-              onclick="toggleProjet(this); event.stopPropagation();"
-            >
-              <source
-                src="files/video-presentation-bot-discord.mp4"
-                type="video/mp4"
-              />
-            </video>
-          </div>
-        </div>
-        <footer>
-          <div class="logo_ls">
-            <img src="/img/logo_C2E6FF.png" alt="logo" />
-          </div>
-          <div class="droite_footer">
-            <div class="contenu">
-              <h1>Contact</h1>
-              <p>
-                Actuellement étudiant au Lycée Pablo Neruda en Terminale
-                technologique (STI2D), <br />
-                Suite à mon acceptation à CESI Rouen pour le Bachelor Concepteur
-                Développeur Informatique en Alternance, <br />Je suis à la
-                recherche d'une entreprise capable de m’offrir la possibilité
-                d’apprendre le métier de Développeur Informatique.
-              </p>
-            </div>
-            <div class="contact">
-              <div class="telephone">
-                <i class="fa-solid fa-phone"></i>
-                <a href="tel:+33761525043">07 61 52 50 43</a>
-              </div>
-              <div class="mail">
-                <i class="fa-solid fa-envelope"></i>
-                <a href="mailto:lucas@lucassaillot.fr">lucas@lucassaillot.fr</a>
-              </div>
-              <div class="linktree">
-                <i class="fa-solid fa-link"></i>
-                  <a href="https://linktr.ee/lucassaillot" target="_blank"
-                  >linktr.ee/lucassaillot</a
-                >
-              </div>
-            </div>
-            <div class="logos">
-              <a
-                href="https://www.linkedin.com/in/lucassaillot/"
-                target="_blank"
-                ><i class="fa-brands fa-linkedin"></i
-              ></a>
-              <a href="https://github.com/lucassaillot" target="_blank"
-                ><i class="fa-brands fa-github"></i
-              ></a>
-              <a href="https://www.instagram.com/lucas.saillot/" target="_blank"
-                ><i class="fa-brands fa-instagram"></i
-              ></a>
-              <a
-                href="https://www.facebook.com/profile.php?id=100063769503624"
-                target="_blank"
-                ><i class="fa-brands fa-facebook"></i
-              ></a>
-            </div>
-          </div>
-        </footer>
-      </div>
-    </div>
-    <!-- JS -->
-    <script src="js/script.js"></script>
-    <!-- VIDEOJS -->
-    <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
-  </body>
+    @media screen and (max-width: 720px) {
+      img {
+        max-width: 150px;
+      }
+      
+      h1 {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body><noscript><meta HTTP-EQUIV="refresh" content="0;url='https://www.lucassaillot.fr/?PageSpeed=noscript'" /><style><!--table,div,span,font,p{display:none} --></style><div style="display:block">Please click <a href="https://www.lucassaillot.fr/?PageSpeed=noscript">here</a> if you are not redirected within a few seconds.</div></noscript>
+<script data-pagespeed-no-defer>//<![CDATA[
+(function(){for(var g="function"==typeof Object.defineProperties?Object.defineProperty:function(b,c,a){if(a.get||a.set)throw new TypeError("ES3 does not support getters and setters.");b!=Array.prototype&&b!=Object.prototype&&(b[c]=a.value)},h="undefined"!=typeof window&&window===this?this:"undefined"!=typeof global&&null!=global?global:this,k=["String","prototype","repeat"],l=0;l<k.length-1;l++){var m=k[l];m in h||(h[m]={});h=h[m]}var n=k[k.length-1],p=h[n],q=p?p:function(b){var c;if(null==this)throw new TypeError("The 'this' value for String.prototype.repeat must not be null or undefined");c=this+"";if(0>b||1342177279<b)throw new RangeError("Invalid count value");b|=0;for(var a="";b;)if(b&1&&(a+=c),b>>>=1)c+=c;return a};q!=p&&null!=q&&g(h,n,{configurable:!0,writable:!0,value:q});var t=this;function u(b,c){var a=b.split("."),d=t;a[0]in d||!d.execScript||d.execScript("var "+a[0]);for(var e;a.length&&(e=a.shift());)a.length||void 0===c?d[e]?d=d[e]:d=d[e]={}:d[e]=c};function v(b){var c=b.length;if(0<c){for(var a=Array(c),d=0;d<c;d++)a[d]=b[d];return a}return[]};function w(b){var c=window;if(c.addEventListener)c.addEventListener("load",b,!1);else if(c.attachEvent)c.attachEvent("onload",b);else{var a=c.onload;c.onload=function(){b.call(this);a&&a.call(this)}}};var x;function y(b,c,a,d,e){this.h=b;this.j=c;this.l=a;this.f=e;this.g={height:window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight,width:window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth};this.i=d;this.b={};this.a=[];this.c={}}function z(b,c){var a,d,e=c.getAttribute("data-pagespeed-url-hash");if(a=e&&!(e in b.c))if(0>=c.offsetWidth&&0>=c.offsetHeight)a=!1;else{d=c.getBoundingClientRect();var f=document.body;a=d.top+("pageYOffset"in window?window.pageYOffset:(document.documentElement||f.parentNode||f).scrollTop);d=d.left+("pageXOffset"in window?window.pageXOffset:(document.documentElement||f.parentNode||f).scrollLeft);f=a.toString()+","+d;b.b.hasOwnProperty(f)?a=!1:(b.b[f]=!0,a=a<=b.g.height&&d<=b.g.width)}a&&(b.a.push(e),b.c[e]=!0)}y.prototype.checkImageForCriticality=function(b){b.getBoundingClientRect&&z(this,b)};u("pagespeed.CriticalImages.checkImageForCriticality",function(b){x.checkImageForCriticality(b)});u("pagespeed.CriticalImages.checkCriticalImages",function(){A(x)});function A(b){b.b={};for(var c=["IMG","INPUT"],a=[],d=0;d<c.length;++d)a=a.concat(v(document.getElementsByTagName(c[d])));if(a.length&&a[0].getBoundingClientRect){for(d=0;c=a[d];++d)z(b,c);a="oh="+b.l;b.f&&(a+="&n="+b.f);if(c=!!b.a.length)for(a+="&ci="+encodeURIComponent(b.a[0]),d=1;d<b.a.length;++d){var e=","+encodeURIComponent(b.a[d]);131072>=a.length+e.length&&(a+=e)}b.i&&(e="&rd="+encodeURIComponent(JSON.stringify(B())),131072>=a.length+e.length&&(a+=e),c=!0);C=a;if(c){d=b.h;b=b.j;var f;if(window.XMLHttpRequest)f=new XMLHttpRequest;else if(window.ActiveXObject)try{f=new ActiveXObject("Msxml2.XMLHTTP")}catch(r){try{f=new ActiveXObject("Microsoft.XMLHTTP")}catch(D){}}f&&(f.open("POST",d+(-1==d.indexOf("?")?"?":"&")+"url="+encodeURIComponent(b)),f.setRequestHeader("Content-Type","application/x-www-form-urlencoded"),f.send(a))}}}function B(){var b={},c;c=document.getElementsByTagName("IMG");if(!c.length)return{};var a=c[0];if(!("naturalWidth"in a&&"naturalHeight"in a))return{};for(var d=0;a=c[d];++d){var e=a.getAttribute("data-pagespeed-url-hash");e&&(!(e in b)&&0<a.width&&0<a.height&&0<a.naturalWidth&&0<a.naturalHeight||e in b&&a.width>=b[e].o&&a.height>=b[e].m)&&(b[e]={rw:a.width,rh:a.height,ow:a.naturalWidth,oh:a.naturalHeight})}return b}var C="";u("pagespeed.CriticalImages.getBeaconData",function(){return C});u("pagespeed.CriticalImages.Run",function(b,c,a,d,e,f){var r=new y(b,c,a,e,f);x=r;d&&w(function(){window.setTimeout(function(){A(r)},0)})});})();pagespeed.CriticalImages.Run('/mod_pagespeed_beacon','https://www.lucassaillot.fr/','0K-weDxRKK',true,false,'FoITwQecRBg');
+//]]></script><img src="/img/logo_C2E6FF.png" alt="Logo Lucas Saillot" data-pagespeed-url-hash=1916964984 onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+<h1>Site en cours de construction</h1>
+<p>Contactez <a href="mailto:lucas@lucassaillot.fr">lucas@lucassaillot.fr</a></p>
+</body>
 </html>
