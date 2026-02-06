@@ -3,14 +3,9 @@ when:
     branch: main
 
 steps:
-  build:
+  build-deploy:
     image: docker:latest
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     commands:
-      - docker compose build
-  
-  deploy:
-    image: docker:latest
-    commands:
-      - docker compose up -d
+      - docker compose up -d --build
