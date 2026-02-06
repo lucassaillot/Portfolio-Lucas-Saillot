@@ -8,4 +8,5 @@ steps:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     commands:
+      - docker compose down --remove-orphans
       - docker compose up -d --build
