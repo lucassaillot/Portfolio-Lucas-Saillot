@@ -1,0 +1,16 @@
+pipeline:
+  # Build l'image
+  build:
+    image: docker/compose
+    commands:
+      - docker-compose build
+  
+  # Lancer les conteneurs
+  deploy:
+    image: docker/compose
+    commands:
+      - docker-compose down
+      - docker-compose up -d
+    when:
+      branch: main
+      event: push
