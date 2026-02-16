@@ -1,0 +1,18 @@
+when:
+  - event: [ push, manual ]
+    branch: main
+
+steps:
+  - name: deploy
+    image: docker:cli
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /srv/apps/portfolio:/srv/apps/portfolio
+    commands:
+      - rm -rf /srv/apps/portfolio/code
+      - cp -r ./ /srv/apps/portfolio/code
+      - cp ./docker-compose.yml /srv/apps/portfolio/docker-compose.yml
+      - cd /srv/apps/portfolio
+      - docker compose build
+      - docker compose up -d --force-recreate
+      - docker image prune -f

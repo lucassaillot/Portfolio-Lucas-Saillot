@@ -1,9 +1,11 @@
 services:
   portfolio:
     image: portfolio:latest
+    ports:
+      - "8050:80"
     networks:
       - proxy
-    build: .
+    build: ./code
     container_name: portfolio
     restart: unless-stopped
 
