@@ -1,8 +1,6 @@
 services:
   portfolio:
     image: portfolio:latest
-    ports:
-      - "8050:80"
     networks:
       - proxy
     build: ./code
